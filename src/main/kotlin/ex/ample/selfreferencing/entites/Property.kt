@@ -10,7 +10,7 @@ class Property : WithProperty {
     @GeneratedValue
     val id: Long? = null
 
-    @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "id")
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "id", insertable=false, updatable =false)
     override val property: Property? = null
 }
